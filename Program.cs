@@ -29,11 +29,16 @@ for (int i = 0; i < args.Length; i++)
 }
 return arr;
 }
+
+void Print(int[] a, int[] b)
+{
+    Console.WriteLine();
+    Console.WriteLine("Получился начальный массив: " + String.Join(", ", a) + ".");
+    Console.WriteLine();
+    Console.WriteLine("Итоговый массив: " + String.Join(", ", b) + ".");
+    Console.WriteLine();
+}
+
 int[] orig = Array(8);
 int[] second = sum(orig);
-
-Console.WriteLine();
-Console.WriteLine("Получился начальный массив: " + String.Join(", ", orig) + ".");
-Console.WriteLine();
-Console.WriteLine("Итоговый массив: " + String.Join(", ", second) + ".");
-Console.WriteLine();
+Print(orig, second);
